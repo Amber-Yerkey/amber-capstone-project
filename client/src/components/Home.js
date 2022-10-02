@@ -17,7 +17,7 @@ function Home(){
     return(
         <>
         {dishList.map((eachDish) => 
-            <Menu key={eachDish.id} eachDish={eachDish} />
+            <Menu key={eachDish.id} dishName={eachDish.name} dishIng={eachDish.ingredients} />
         )}
         </>
     )

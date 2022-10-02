@@ -1,12 +1,18 @@
 import React from "react";
 
-function Menu({eachDish}){
-    console.log(eachDish)
+function Menu({dishName, dishIng}){
+    console.log(dishName)
+    console.log(dishIng)
     return(
         <>
         <ul>
-        {eachDish.name}
+        <b>{dishName}</b>
         </ul>
+        {dishIng.map((eachIng) => 
+        <ul key={eachIng.id}>
+            {eachIng.name}
+        </ul>
+        )}
         </>
     )
 }
